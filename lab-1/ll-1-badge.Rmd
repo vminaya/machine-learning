@@ -25,25 +25,25 @@ Part A:
 
 1.  How good was the machine learning model we developed in the guiding practice? Would you be comfortable using it to code more conversations? What if you read about someone using such a model as a reviewer of research? Please add your thoughts and reflections following the bullet point below.
 
--   
+-   It did pretty well I think with accuracy=0.84 and roc_auc =0.94. I would be comfortable using such model but would run robustness checks before like bootstrapping the testing data and re-fitting the model. I do not think this data and model is good for other purposes besides predicting the coded outcome. You would need predictors that are related to the quality of research to fit the model. 
 
 2.  How might the model be improved? Share any ideas you have at this time below:
 
--   
+-   Include additinal predictors like text covariates or using different testing data (or K) to re-fit the model 
 
 Part B: Use the institutional library (e.g. [NCSU Library](https://www.lib.ncsu.edu/#articles)), [Google Scholar](https://scholar.google.com/) or search engine to locate a research article, presentation, or resource that applies machine learning to an educational context aligned with your research interests. More specifically, **locate a machine learning study that involve making predictions**.
 
 1.  Provide an APA citation for your selected study.
 
-    -   
+    -   Bahr, P. R., Fagioli, L. P., Hetts, J., Hayward, C., Willett, T., Lamoree, D., ... & Baker, R. B. (2019). Improving placement accuracy in California’s community colleges using multiple measures of high school achievement. Community College Review, 47(2), 178-211.
 
 2.  What research questions were the authors of this study trying to address and why did they consider these questions important?
 
-    -   
+    -   Do multiple measures predict college placement better than standardized test scores? Standardized placement tests remain the primary means by which new community college students are assessed and placed in the hierarchy of math and English coursework. A growing body of evidence indicates that placement tests tend to underestimate students’ likelihood of achieving passing grades in college-level courses, leading to students being misplaced in developmental coursework, slowing their academic progress, and increasing their likelihood of dropping out of college. This question is important as placement into remediation has been studied to significantly affect college persistence and completion, particularly for low-income, first-gen, and Black and Hispanic students.
 
 3.  What were the results of these analyses?
 
-    -   
+    -   Cumulative high school grade point average (GPA) is the most consistently useful predictor of performance across levels of math and English coursework, and a higher GPA is necessary to signal readiness for college-level coursework in math than is necessary to signal readiness for college-level coursework in English. In addition, cumulative GPA combined with specific indications of progress in the high school curriculum is frequently useful for predicting performance in math among direct matriculants and for predicting performance in both math and English among nondirect matriculants.
 
 ### Part II: Data Product
 
@@ -71,18 +71,21 @@ final_fit$.predictions[[1]] %>%
 Please interpret the above confusion matrix using [these guidelines](https://towardsdatascience.com/understanding-confusion-matrix-a9ad42dcfd62) in terms of the true positive, true negative, false positive, and false negative rates. After each of the following (i.e., "True positive"), add both the *number* and percentage of observations. For instance, if there were 100 true positives out of a total of 400 data points, please write: 100 (25%).
 
 **True positive**:
-
+260 (87%)
 **True negative**:
-
+402(87%)
 **False positive**:
-
+60 (13%)
 **False negative**:
+37 (12%)
+
+
 
 You can read more about interpreting these [here](https://bradleyboehmke.github.io/HOML/process.html#classification-models) in terms of the specificity, sensitivity, precision, and recall, four statistics based on the information in the confusion matrix.
 
 Return to your answer for Part 1A. Now, having examined the true and false positive and negative rates, how good do you think machine learning model we developed in the case study was? Write more specifically using the evidence you have from creating and interpreting the confusion matrix (above) after the following bullet point.
 
--   
+-   The confusion matrix confirms my answer for Part 1A. Precision, recall, and F-measures are above 80%
 
 ### Knit & Submit
 
